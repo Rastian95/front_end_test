@@ -6,11 +6,13 @@ import LogoSearch from '../../assets/SVGs/icn_person.svg';
 
 export default function Header() {
     return (
-        <header style={headerStyle}>
-            <div>
-                <img src={Logo} alt="logo" style={logo}></img>
-                <img src={LogoPerson} alt="logo" style={logo}></img>
-                <img src={LogoSearch} alt="logo" style={logo}></img>
+        <header className="row justify-content-around header">
+            <div className='col-12 col-md-8'>
+                <div className="d-flex">
+                    <img className="mr-auto logo" src={Logo} alt="logo"  ></img>
+                    <img src={LogoPerson} alt="logoPerson" className='logo' ></img>
+                    <img src={LogoSearch} alt="logoSearch" className='logo' style={{width: '1.5rem'}}></img>
+                </div>
             </div>
             
             {/* <Link style={linkStyle} to="/">Home</Link> | 
@@ -19,18 +21,4 @@ export default function Header() {
     )
 }
 
-const headerStyle = {
-    background: '#004A80',
-    color: '#fff',
-    textAlign: 'center',
-    height: '65px'
-}
 
-const linkStyle = {
-    color: '#fff',
-    textDecoration: 'none'
-}
-
-const logo ={
-    margin: '10px'
-}
