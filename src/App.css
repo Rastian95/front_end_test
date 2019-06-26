@@ -1,6 +1,6 @@
-
 * {
-  outline: none; }
+  outline: none; 
+}
 
 body {
   background: #fff;
@@ -32,6 +32,27 @@ html {
     padding-bottom: 4rem;
 }
 
+.float-container.active label{
+  transform: translate(8px, 3px) scale(.7);
+}
+
+.float-container label {
+  font-size: 16px;
+  position: absolute;
+  color: #495057;
+  transform-origin: top left;
+  transform: translate(9px, 14px) scale(1);
+  transition: all .1s ease-in-out;
+}
+
+.float-container input {    
+  padding: 20px 0px 0px 8px !important;
+}
+
+.float-container input:focus { 
+  border-color: #F6BC25;
+  border-width: 2px;
+}
 
 .header{
   background: #004A80;
@@ -70,14 +91,12 @@ html {
   color: #999999;
 }
 
-
 .links{
   color: #004A80 !important;
   margin: 1rem;
 }
 
 .btnGo{
-  display: inline;
   border: none;
   padding: 7px 20px;
   cursor: pointer;
@@ -86,9 +105,8 @@ html {
   border-radius: 6px;
   font-family: HelveticaNeue-Bold;
   font-size: 24px;
+  font-weight: bold;
   color: #004A80;
-  letter-spacing: 1px;
-  text-align: center;
 }
 
 .btnGo:hover{
@@ -124,19 +142,15 @@ ol li {
 ol li:before {
   counter-increment: numList;
   content: counter(numList);
-  
   float: left;
   position: absolute;
   left: -2rem;
-  
   font: bold 2rem sans-serif;
   text-align: center;
   color: #F6BC25 ;
   line-height: 3.5rem;
-  
   width: 3.5rem; height: 3.5rem;
   background: #004A80;
-  
   -moz-border-radius: 999px;
   border-radius: 999px
 }
@@ -184,9 +198,3 @@ ol li span{
     padding-left: 0rem;
   }
 }
-
-
-
-
-
-
