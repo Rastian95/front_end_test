@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import uuid from 'uuid';
 
-export default function Result() {
+export default function Result(props) {
     return (
         <div className='row justify-content-center result'>
             <div className='col-12 col-md-8'>
@@ -11,7 +12,7 @@ export default function Result() {
                         <div className='row'>
                             <div className="col-12">
                                 <ol>
-                                    <li><span>John Smith, 35</span><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                    <li><span>{props.result.name}, {props.result.age}</span><br/>{props.result.notes}</li>
                                 </ol>
                             </div>
                         </div>
@@ -19,25 +20,22 @@ export default function Result() {
                         <div className="row">
                             <div className='col-12 col-md-6'>
                                 <p>Address</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>{props.result.address}</p>
                             </div>
                             <div className='col-12 col-md-6'>
                                 <p>Phone Numbers</p>
                                 <p>
-                                    (555) 555-5555<br/>
-                                    (555) 555-5555<br/>
-                                    (555) 555-5555
+                                    {props.result.phoneNumbers.map( (row) => (<React.Fragment key={uuid.v4()}>{row.phone}<br/></React.Fragment>))}
                                 </p>
                             </div>
                             <div className='col-12 col-md-6'>
                                 <p>Email</p>
-                                <p>loremipsum@dolorsit.com</p>
+                                <p>{props.result.email}</p>
                             </div>
                             <div className='col-12 col-md-6'>
                                 <p>Relatives</p>
                                 <p>
-                                    Jane Smith<br/>
-                                    John Smith Jr
+                                    {props.result.relatives.map( (row, i) => (<React.Fragment key={uuid.v4()}>{row.name}<br/></React.Fragment>))}
                                 </p>
                             </div>
                         </div>
