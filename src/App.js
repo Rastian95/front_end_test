@@ -11,17 +11,12 @@ import './assets/Plugins/bootstrap/css/bootstrap.css';
    
 
 function App() {
-
-  const [data] = useState(Data)
   const [result, setResult] = useState("");
 
   const searchEmail = (mail) => {
-      var c = false;
-      setResult(data.data.find((person) => {
-        if(person.email === mail){c = true;}
-        return person.email === mail
-      }));
-      return c;
+      const buscar = Data.data.find((person) => {return person.email === mail});
+      setResult(buscar);
+      return buscar;
   }
 
   return (

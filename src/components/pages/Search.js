@@ -48,13 +48,13 @@ export default function Search(props) {
                     : [<h1 key={uuid.v4()}>Can’t Find The Right Person?</h1>,<h6 key={uuid.v4()}><span style={{color: '#F6BC25'}}>Try Again</span> - Make a new search</h6>]
                 }
                 <div id="floatContainer" className={`d-flex flex-column flex-md-row float-container ${label.active ? "active" : ""}`}>
-                        <label  htmlFor="email" style={{color: label.color}}>{label.value}</label>
-                        <input 
-                            style={{marginBottom: '0.5rem', borderWidth: '2px', borderColor : label.inputColor}} 
-                            onFocus={onFocus} onBlur={onBlur} value={input.value} onChange={onChange}
-                            type='email' id='email' name='email' className="form-control"
-                        />
-                        <button style={{marginBottom: '0.5rem'}} onClick={onClick} type="submit" id='searchEmail' className="btnGo" >GO!</button>
+                    <label  htmlFor="email" style={{color: label.color}}>{label.value}</label>
+                    <input 
+                        style={{marginBottom: '0.5rem', borderWidth: '2px', borderColor : label.inputColor}} 
+                        onFocus={onFocus} onBlur={onBlur} value={input.value} onChange={onChange}
+                        type='email' id='email' name='email' className="form-control"
+                    />
+                    <button style={{marginBottom: '0.5rem'}} onClick={onClick} type="submit" id='searchEmail' className="btnGo" >GO!</button>
                 </div>
                 <div className="d-flex text-left">
                     <img src={LogoLock} alt="logoLock" className="logo"></img>

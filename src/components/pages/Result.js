@@ -16,7 +16,6 @@ export default function Result(props) {
                                 </ol>
                             </div>
                         </div>
-                        
                         <div className="row">
                             <div className='col-12 col-md-6'>
                                 <p>Address</p>
@@ -24,9 +23,7 @@ export default function Result(props) {
                             </div>
                             <div className='col-12 col-md-6'>
                                 <p>Phone Numbers</p>
-                                <p>
-                                    {props.result.phoneNumbers.map( (row) => (<React.Fragment key={uuid.v4()}>{row.phone}<br/></React.Fragment>))}
-                                </p>
+                                <p>{props.result.phoneNumbers.map( (row) => (<React.Fragment key={uuid.v4()}>{row.phone}<br/></React.Fragment>))}</p>
                             </div>
                             <div className='col-12 col-md-6'>
                                 <p>Email</p>
@@ -34,9 +31,7 @@ export default function Result(props) {
                             </div>
                             <div className='col-12 col-md-6'>
                                 <p>Relatives</p>
-                                <p>
-                                    {props.result.relatives.map( (row, i) => (<React.Fragment key={uuid.v4()}>{row.name}<br/></React.Fragment>))}
-                                </p>
+                                <p>{props.result.relatives.map( (row, i) => (<React.Fragment key={uuid.v4()}>{row.name}<br/></React.Fragment>))}</p>
                             </div>
                         </div>
                     </div>
